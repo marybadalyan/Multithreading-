@@ -21,6 +21,10 @@ add_executable(main
     ThreadPool.cpp
 )
 
+add_executable(main_async
+    main_async.cpp
+    AsyncPool.cpp
+)
 # Link the executable against the threads library found earlier.
 # The Threads::Threads part is a modern CMake "target" that works across
 # different platforms (Linux, macOS, Windows).
