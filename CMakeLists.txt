@@ -14,9 +14,9 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(Threads REQUIRED)
 
 # This is the key command. It tells CMake to create an executable named
-# "my_app" from the specified source files.
+# "main" from the specified source files.
 # This replaces the need for #include "ThreadPool.cpp".
-add_executable(my_app
+add_executable(main
     main.cpp
     ThreadPool.cpp
 )
@@ -24,4 +24,4 @@ add_executable(my_app
 # Link the executable against the threads library found earlier.
 # The Threads::Threads part is a modern CMake "target" that works across
 # different platforms (Linux, macOS, Windows).
-target_link_libraries(my_app PRIVATE Threads::Threads)
+target_link_libraries(main PRIVATE Threads::Threads)
